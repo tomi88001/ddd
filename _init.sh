@@ -25,7 +25,10 @@ else
 fi
 
 # 进入仓库目录
-cd /root/ddd
+cd ddd || { echo "目录 'ddd' 不存在，退出脚本"; exit 1; }
+
+# 打印当前工作目录，确保进入了 'ddd' 目录
+echo "当前工作目录：$(pwd)"
 
 # 删除旧的虚拟环境（如果有的话）
 rm -rf venv
