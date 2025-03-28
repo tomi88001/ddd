@@ -27,3 +27,7 @@ fi
 echo "设置新的定时任务..."
 (crontab -l 2>/dev/null; echo "$CRON_SCHEDULE $CRON_SCRIPT_PATH $PARAM") | crontab -
 echo "新的定时任务已设置。"
+
+# 立即执行一次脚本
+echo "立即执行脚本..."
+$CRON_SCRIPT_PATH $PARAM
