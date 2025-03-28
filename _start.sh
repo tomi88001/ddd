@@ -10,11 +10,6 @@ fi
 echo "正在停止之前的任务..."
 sh _stop.sh
 
-# 检查 _stop.sh 是否成功执行
-if [ $? -ne 0 ]; then
-    echo "_stop.sh 执行失败，无法停止任务，脚本终止。"
-    exit 1
-fi
 # 删除旧的虚拟环境（如果有的话）
 rm -rf venv
 
