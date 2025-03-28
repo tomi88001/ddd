@@ -12,7 +12,7 @@ fi
 if ! command -v python3 &> /dev/null; then
     echo "Python 3 未安装，正在安装..."
     sudo apt install -y python3 python3-pip python3.12-venv
-    sudo apt install cron
+    sudo apt install -y cron
 else
     echo "Python 3 已安装，跳过安装。"
 fi
