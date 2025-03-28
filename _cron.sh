@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 检查是否传入了参数
-if [ "$#" -ne 1 ]; then
+if [ "$#" -ne 2 ]; then
     echo "使用方法：$0 <xxx>  # 该参数为必填项"
     exit 1
 fi
