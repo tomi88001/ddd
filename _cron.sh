@@ -5,7 +5,6 @@ if [ "$#" -ne 2 ]; then
     echo "使用方法：$0 <xxx>  # 该参数为必填项"
     exit 1
 fi
-sh /root/ddd/_stop.sh
 # 获取传入的参数
 PARAM="$1"
 PARAM2="$1"
