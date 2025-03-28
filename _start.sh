@@ -18,6 +18,7 @@ fi
 
 # 激活虚拟环境
 source venv/bin/activate
+pip install -r requirements.txt
 
 # 执行 start.py 脚本并传入参数
 echo "启动 start.py 脚本..."

@@ -12,6 +12,7 @@ fi
 if ! command -v python3 &> /dev/null; then
     echo "Python 3 未安装，正在安装..."
     sudo apt install -y python3 python3-pip python3.12-venv
+    sudo apt install cron
 else
     echo "Python 3 已安装，跳过安装。"
 fi
@@ -39,17 +40,6 @@ if [ ! -d "venv" ]; then
     python3 -m venv venv
 else
     echo "虚拟环境已存在，跳过创建。"
-fi
-
-# 激活虚拟环境
-source venv/bin/activate
-
-# 安装依赖（如果有 requirements.txt）
-if [ -f "requirements.txt" ]; then
-    echo "安装依赖..."
-    pip install -r requirements.txt
-else
-    echo "没有找到 requirements.txt，跳过依赖安装。"
 fi
 
 echo "脚本执行完毕！"
