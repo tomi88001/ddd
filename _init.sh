@@ -25,7 +25,7 @@ else
 fi
 
 # 进入仓库目录
-cd ddd
+cd /root/ddd
 
 # 删除旧的虚拟环境（如果有的话）
 rm -rf venv
