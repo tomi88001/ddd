@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# 停止所有 python3 start.py 进程
-echo "Stopping all 'python3 start.py' processes..."
-for pid in $(pgrep -f 'python3 start.py'); do  # 使用 pgrep -f 来精确匹配整个命令
+# 停止所有 python3 main.py 进程
+echo "Stopping all 'python3 main.py' processes..."
+for pid in $(pgrep -f 'python3 main.py'); do  # 使用 pgrep -f 来精确匹配整个命令
     echo "Force stopping process with PID: $pid"
     
     # 强制终止进程
@@ -43,8 +43,8 @@ done
 
 # 打印停止后的进程列表
 echo "\033[0;31m_stop.sh 执行完 =======================\033[0m"
-echo "当前运行的 python3 start.py 进程列表："
-ps aux | grep 'python3 start.py' | grep -v grep
+echo "当前运行的 python3 main.py 进程列表："
+ps aux | grep 'python3 main.py' | grep -v grep
 
 echo "当前运行的 _cron.sh 进程列表："
 ps aux | grep '_cron.sh' | grep -v grep

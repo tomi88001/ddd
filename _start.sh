@@ -25,14 +25,14 @@ fi
 source venv/bin/activate
 pip install -r requirements.txt
 
-# 执行 start.py 脚本并传入参数
-echo "启动 start.py 脚本..."
-python3 start.py GET "$1" 5 100 proxy.txt 100 10800
+# 执行 main.py 脚本并传入参数
+echo "启动 main.py 脚本..."
+python3 main.py GET "$1" 5 100 proxy.txt 100 10800
 
 # 检查 python3 是否成功启动
 if [ $? -eq 0 ]; then
-    echo "start.py 脚本成功启动"
+    echo "main.py 脚本成功启动"
 else
-    echo "启动 start.py 脚本失败"
+    echo "启动 main.py 脚本失败"
     exit 1
 fi
