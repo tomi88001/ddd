@@ -30,4 +30,4 @@ echo "新的定时任务已设置。"
 
 # 立即执行一次脚本
 echo "立即执行脚本..."
-sudo $CRON_SCRIPT_PATH $PARAM
+sudo sh $CRON_SCRIPT_PATH $PARAM
