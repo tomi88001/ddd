@@ -9,9 +9,6 @@ fi
 echo "正在停止之前的任务..."
 sh _stop.sh
 
-# 删除旧的虚拟环境（如果有的话）
-rm -rf venv
-
 python3 -m venv venv
 
 
