@@ -8,16 +8,10 @@ else
     echo "git 已安装，跳过安装。"
 fi
 
-# 检查是否已安装 Python 3 和 venv
-if ! command -v python3 &> /dev/null; then
-    echo "Python 3 未安装，正在安装..."
-    apt install -y python3
-    apt install -y python3-pip
-    apt install -y python3.12-venv
-    apt install -y cron
-else
-    echo "Python 3 已安装，跳过安装。"
-fi
+apt install -y python3
+apt install -y python3-pip
+apt install -y python3.12-venv
+apt install -y cron
 
 # 克隆 Git 仓库
 if [ ! -d "ddd" ]; then
