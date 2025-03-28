@@ -31,15 +31,5 @@ cd ddd || { echo "目录 'ddd' 不存在，退出脚本"; exit 1; }
 # 打印当前工作目录，确保进入了 'ddd' 目录
 echo "当前工作目录：$(pwd)"
 
-# 删除旧的虚拟环境（如果有的话）
-rm -rf venv
-
-# 检查虚拟环境是否已存在
-if [ ! -d "venv" ]; then
-    echo "创建虚拟环境..."
-    python3 -m venv venv
-else
-    echo "虚拟环境已存在，跳过创建。"
-fi
 
 echo "脚本执行完毕！"

@@ -15,6 +15,16 @@ if [ $? -ne 0 ]; then
     echo "_stop.sh 执行失败，无法停止任务，脚本终止。"
     exit 1
 fi
+# 删除旧的虚拟环境（如果有的话）
+rm -rf venv
+
+# 检查虚拟环境是否已存在
+if [ ! -d "venv" ]; then
+    echo "创建虚拟环境..."
+    python3 -m venv venv
+else
+    echo "虚拟环境已存在，跳过创建。"
+fi
 
 # 激活虚拟环境
 source venv/bin/activate
