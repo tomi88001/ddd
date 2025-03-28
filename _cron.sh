@@ -7,7 +7,7 @@ if [ "$#" -ne 2 ]; then
 fi
 # 获取传入的参数
 PARAM="$1"
-PARAM2=$1
+PARAM2=$2
 
 # 定义定时任务脚本的路径
 CRON_SCRIPT_PATH="/root/ddd/_start.sh"  # 请根据实际路径修改
