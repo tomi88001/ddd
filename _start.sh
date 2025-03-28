@@ -12,13 +12,8 @@ sh _stop.sh
 # 删除旧的虚拟环境（如果有的话）
 rm -rf venv
 
-# 检查虚拟环境是否已存在
-if [ ! -d "venv" ]; then
-    echo "创建虚拟环境..."
-    python3 -m venv venv
-else
-    echo "虚拟环境已存在，跳过创建。"
-fi
+python3 -m venv venv
+
 
 # 激活虚拟环境
 source venv/bin/activate
