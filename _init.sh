@@ -11,7 +11,7 @@ fi
 # 检查是否已安装 Python 3 和 venv
 if ! command -v python3 &> /dev/null; then
     echo "Python 3 未安装，正在安装..."
-    sudo apt install -y python3 python3-pip python3-venv
+    sudo apt install -y python3 python3-pip python3.12-venv
 else
     echo "Python 3 已安装，跳过安装。"
 fi
@@ -26,6 +26,9 @@ fi
 
 # 进入仓库目录
 cd ddd
+
+# 删除旧的虚拟环境（如果有的话）
+rm -rf venv
 
 # 检查虚拟环境是否已存在
 if [ ! -d "venv" ]; then
