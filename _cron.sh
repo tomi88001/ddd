@@ -1,13 +1,14 @@
 #!/bin/bash
 
 # 检查是否传入了参数
-if [ "$#" -ne 2 ]; then
-    echo "使用方法：$0 <xxx>  # 该参数为必填项"
+if [ "$#" -ne 3 ]; then
+    echo "使用方法：$0 <xxx> <1-5> <1>  # 该参数为必填项"
     exit 1
 fi
 # 获取传入的参数
 PARAM="$1"
 PARAM2=$2
+PARAM3=$3
 
 # 定义定时任务脚本的路径
 CRON_SCRIPT_PATH="/root/ddd/_start.sh"  # 请根据实际路径修改
@@ -25,9 +26,9 @@ fi
 
 # 设置新的定时任务
 echo "设置新的定时任务..."
-(crontab -l 2>/dev/null; echo "$CRON_SCHEDULE $CRON_SCRIPT_PATH $PARAM $PARAM2") | crontab -
+(crontab -l 2>/dev/null; echo "$CRON_SCHEDULE $CRON_SCRIPT_PATH $PARAM $PARAM2 $PARAM3") | crontab -
 echo "新的定时任务已设置。"
 
 # 立即执行一次脚本
 echo "立即执行脚本..."
-sudo sh $CRON_SCRIPT_PATH $PARAM $PARAM2
+nohup sudo sh $CRON_SCRIPT_PATH $PARAM $PARAM2 $PARAM3&> /dev/null &
