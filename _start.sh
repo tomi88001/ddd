@@ -23,7 +23,8 @@ pip install -r requirements.txt
 
 # 执行 main.py 脚本并传入参数
 echo "启动 main.py 脚本..."
-python3 main.py GET "$1" "$2" 300 proxy.txt 100 10800
+rm -rf ./files/proxies/proxy.txt
+python3 main.py GET "$1" "$2" 400 proxy.txt 100 10800
 
 # 检查 python3 是否成功启动
 if [ $? -eq 0 ]; then

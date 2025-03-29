@@ -5,7 +5,7 @@ if [ "$#" -gt 1 ]; then
     echo "使用方法：$0 [1]  # 可选的参数 1 仅关闭 main.py"
     exit 1
 fi
-
+rm -rf /root/ddd/files/proxies/proxy.txt 
 # 获取传入的参数
 MODE="$1"
 
